@@ -54,6 +54,6 @@ app.use("/", loginroute);
 app.use("/product", productroute);
 app.use("/category", categoryroute);
 
-app.listen(process.env.PORT || 1400, process.env.HOST, () => {
+app.listen(process.env.PORT || 1400, () => {
   console.log("server started at port no " + port);
 });

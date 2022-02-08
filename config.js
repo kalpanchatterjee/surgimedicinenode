@@ -13,7 +13,7 @@ const connection = mysql.createConnection({
   user: "admin",
   password: "Ka.721211",
   port: 3306,
-  database: "medico_db",
+  database: "medicodb",
 });
 
 connection.connect(function (err) {

@@ -3,13 +3,7 @@ const router = express.Router();
 const bcrypt = require("bcryptjs");
 const saltRounds = 10;
 const sql = require("mysql2");
-
-const db = sql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "Ka@721211",
-  database: "medico_db",
-});
+const db = require("../config");
 
 router.post("/register", (req, res) => {
   let first_name = req.body.first_name;
