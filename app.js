@@ -35,15 +35,6 @@ app.use((req, res, next) => {
   next();
 });
 
-//mysql db connect
-// db.connect((err) => {
-//   if (err) {
-//     console.log(err);
-//   } else {
-//     console.log("mysql db connected");
-//   }
-// });
-
 //cors origin check
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
