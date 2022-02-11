@@ -83,4 +83,19 @@ router.delete("/deleteProduct/:id", (req, res) => {
   });
 });
 
+router.get("/getProductsByCategory/:id", (req, res) => {
+  let category_id = req.params.id;
+  let limit = req.body.limit;
+  let index = req.body.index;
+  let query = "select * from co_products where category_id=" + category_id;
+
+  if (index != null && index != "" && limit != null && limit != "") {
+    query += " LIMIT " + index + "," + limit;
+  }
+  db.query(query, (err, result) => {
+    if (err) throw err;
+    else res.json(result);
+  });
+});
+
 module.exports = router;
